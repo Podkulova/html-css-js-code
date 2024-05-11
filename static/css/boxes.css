@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* aby jsme meli vynulovane marginy a paddingy */
+}
+
+.box-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray;
+}
+
+.box {
+  width: 150px;
+  margin: 50px 0;
+  padding: 20px;
+  border: white 5px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.black {
+  height: 120px;
+  background-color: black;
+  color: white;
+}
+
+.blue {
+  height: 150px;
+  background-color: blue;
+  color: white;
+}
+
+.red {
+  height: 180px;
+  background-color: red;
+}
+
+.green {
+  height: 60px;
+  background-color: green;
+}
+
+.with-green-border {
+  border: green 5px solid;
+}
