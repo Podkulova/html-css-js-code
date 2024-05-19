@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpage elements</title>
+</head>
+<body>
+<h1 id="header">Dynamic header</h1>
+<div id="controls">
+  <button id="show">Change to a sample text</button><br/>
+  <button id="show-input">Change to a text from an element</button>
+  <input type="text" id="id-input" placeholder="Zde můžeš psát"/>
+</div>
+<div id="test">
+  <p id="example">Sample text to be loaded</p>
+  <p id="example2">Lorem ipsum bla bla bla</p>
+  <p id="example3">Tests teach!</p>
+  <p id="example4"></p>
+  <p id="example5" style="display: none">Hidden text which can be also displayed!</p>
+</div>
+<script>
+
+  // Matematické operace
+  let num1 = 5;
+  let num2 = 12;
+
+  console.log("Sčítání: " + (num1 + num2));
+  console.log("Odčítání: " + (num1 - num2));
+  console.log("Násobení: " + (num1 * num2));
+  console.log("Dělení: " + (num1 / num2));
+
+  if (num1 > num2) {
+    console.log(num1 + " je větší než " + num2);
+  } else if (num1 < num2) {
+    console.log(num1 + " je menší než " + num2);
+  } else {
+    console.log(num1 + " je rovno " + num2);
+  }
+
+  // Součtu všech čísel od nižšího po vyšší
+  let lower = Math.min(num1, num2);
+  let higher = Math.max(num1, num2);
+  let sum = 0;
+
+  for (let i = lower; i <= higher; i++) {
+    sum += i;
+  }
+  console.log("Součet všech čísel od " + lower + " do " + higher + " je: " + sum);
+
+  // Funkce pro zobrazení součtu v dialogovém okně
+  function showSum(a, b) {
+    let lower = Math.min(a, b);
+    let higher = Math.max(a, b);
+    let sum = 0;
+
+    for (let i = lower; i <= higher; i++) {
+      sum += i;
+    }
+
+    alert("Součet všech čísel od " + lower + " do " + higher + " je: " + sum);
+  }
+
+  // Volání funkce showSum s třemi různými dvojicemi hodnot
+  showSum(2, 8);
+  showSum(4, 18);
+  showSum(1, 6);
+
+
+  // Změna textu v hlavičce s parametrem id
+  function show(id = 'example') {
+    const header = document.getElementById("header");
+    const element = document.getElementById(id);
+    if (element) {
+      header.innerText = element.innerText;
+    } else {
+      header.innerText = 'Element s id "' + id + '" nenalezen.';
+    }
+  }
+
+  // Tlačítku s id show
+  document.getElementById("show").addEventListener("click", function() {
+    show();
+  });
+
+  // Funkce pro načtení hodnoty id-input
+  function showInput() {
+    const inputId = document.getElementById("id-input").value;
+    show(inputId);
+  }
+
+  //Tlačítko s id show-input
+  document.getElementById("show-input").addEventListener("click", showInput);
+</script>
+</body>
+</html>

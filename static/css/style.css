@@ -31,6 +31,71 @@ p {
 
 /*Header*/
 
-/*Main*/
+.main-header {
+  overflow: hidden;
+  background-color: #343a40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 97px;
+}
 
-/*Footer*/
+.main-header img {
+  padding-left: 20px;
+}
+
+.main-header nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.main-header nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4fcc19;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding-right: 20px;
+  height: 100%;
+}
+
+/* Hover effect */
+.main-header a:hover {
+  background-color: #8c52ff;
+}
+
+/* Main */
+
+main {
+  margin: 30px 0;
+}
+
+/* Article */
+
+.divider {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
+#author img {
+  float: left;
+  margin-right: 20px;
+  width: 70px;
+  border-radius: 5px;
+}
+
+/* Footer */
+.main-footer {
+  text-align: center;
+}
